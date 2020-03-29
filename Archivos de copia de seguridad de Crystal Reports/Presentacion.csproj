@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{500B71E6-6134-4619-84D6-94E204F07021}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentacion</RootNamespace>
+    <AssemblyName>Presentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>E:\archivos\revicion\Ejemplo de login\Ejemplo de login\Ejemplo de login\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>E:\archivos\revicion\Ejemplo de login\Ejemplo de login\Ejemplo de login\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\documentos\ideas\generar qr\WindowsFormsApp5\WindowsFormsApp5\bin\Debug\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConjuntoDaros.cs">
+      <DependentUpon>ConjuntoDaros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDaros.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConjuntoDaros.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="maps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="maps.Designer.cs">
+      <DependentUpon>maps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PCodigoQrbarras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PCodigoQrbarras.Designer.cs">
+      <DependentUpon>PCodigoQrbarras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pconsultascodigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pconsultascodigos.Designer.cs">
+      <DependentUpon>Pconsultascodigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\ActuProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\ActuProducto.Designer.cs">
+      <DependentUpon>ActuProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\PactuCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cliente\PactuCliente.Designer.cs">
+      <DependentUpon>PactuCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\PFechavencimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\PFechavencimiento.Designer.cs">
+      <DependentUpon>PFechavencimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\PactuProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\PactuProveedor.Designer.cs">
+      <DependentUpon>PactuProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\Pempresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\Pempresa.Designer.cs">
+      <DependentUpon>Pempresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Ptipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Ptipo.Designer.cs">
+      <DependentUpon>Ptipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Punidadmedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Punidadmedida.Designer.cs">
+      <DependentUpon>Punidadmedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\PEps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\PEps.Designer.cs">
+      <DependentUpon>PEps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\Pactuusuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Pactuusuario.Designer.cs">
+      <DependentUpon>Pactuusuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\Pclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cliente\Pclientes.Designer.cs">
+      <DependentUpon>Pclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\Pfondodepensiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Pfondodepensiones.Designer.cs">
+      <DependentUpon>Pfondodepensiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plogo.Designer.cs">
+      <DependentUpon>Plogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pmenu.designer.cs">
+      <DependentUpon>Pmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Plogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Plogin.designer.cs">
+      <DependentUpon>Plogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cliente\Pnclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cliente\Pnclientes.Designer.cs">
+      <DependentUpon>Pnclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PnDomicilios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PnDomicilios.Designer.cs">
+      <DependentUpon>PnDomicilios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\Pnestudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Pnestudio.Designer.cs">
+      <DependentUpon>Pnestudio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PnFProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PnFProveedor.Designer.cs">
+      <DependentUpon>PnFProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Pnproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Pnproductos.Designer.cs">
+      <DependentUpon>Pnproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\Pnproveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\Pnproveedor.Designer.cs">
+      <DependentUpon>Pnproveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario\PnUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\PnUsuario.Designer.cs">
+      <DependentUpon>PnUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Pproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\Pproductos.Designer.cs">
+      <DependentUpon>Pproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Proveedor\Pproveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proveedor\Pproveedores.Designer.cs">
+      <DependentUpon>Pproveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pregistrado_por.cs" />
+    <Compile Include="Preportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preportes.Designer.cs">
+      <DependentUpon>Preportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario\Pusuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario\Pusuarios.Designer.cs">
+      <DependentUpon>Pusuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="venta\Pventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="venta\Pventas.Designer.cs">
+      <DependentUpon>Pventas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="cliente\PactuCliente.resx">
+      <DependentUpon>PactuCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="maps.resx">
+      <DependentUpon>maps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PCodigoQrbarras.resx">
+      <DependentUpon>PCodigoQrbarras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pconsultascodigos.resx">
+      <DependentUpon>Pconsultascodigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\PFechavencimiento.resx">
+      <DependentUpon>PFechavencimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\ActuProducto.resx">
+      <DependentUpon>ActuProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Ptipo.resx">
+      <DependentUpon>Ptipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Punidadmedida.resx">
+      <DependentUpon>Punidadmedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\PactuProveedor.resx">
+      <DependentUpon>PactuProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Pempresa.resx">
+      <DependentUpon>Pempresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\PEps.resx">
+      <DependentUpon>PEps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Pactuusuario.resx">
+      <DependentUpon>Pactuusuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cliente\Pclientes.resx">
+      <DependentUpon>Pclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Pfondodepensiones.resx">
+      <DependentUpon>Pfondodepensiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plogo.resx">
+      <DependentUpon>Plogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pmenu.resx">
+      <DependentUpon>Pmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Plogin.resx">
+      <DependentUpon>Plogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cliente\Pnclientes.resx">
+      <DependentUpon>Pnclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PnDomicilios.resx">
+      <DependentUpon>PnDomicilios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Pnestudio.resx">
+      <DependentUpon>Pnestudio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PnFProveedor.resx">
+      <DependentUpon>PnFProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Pnproductos.resx">
+      <DependentUpon>Pnproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Pnproveedor.resx">
+      <DependentUpon>Pnproveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\PnUsuario.resx">
+      <DependentUpon>PnUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\Pproductos.resx">
+      <DependentUpon>Pproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proveedor\Pproveedores.resx">
+      <DependentUpon>Pproveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preportes.resx">
+      <DependentUpon>Preportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuario\Pusuarios.resx">
+      <DependentUpon>Pusuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="venta\Pventas.resx">
+      <DependentUpon>Pventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ConjuntoDaros.xsc">
+      <DependentUpon>ConjuntoDaros.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDaros.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConjuntoDaros.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDaros.xss">
+      <DependentUpon>ConjuntoDaros.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marca-de-prohibido.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruzar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruzar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{94E47FA0-5309-48A0-A060-49CF61BAE615}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\importar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exportar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-administrador-masculino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario-administrador-masculino %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrador-con-tuercas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajero-automatico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\camion-de-reparto-a-domicilio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puesta-en-marcha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informe-de-progreso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\divisa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30971.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reparto-de-domicilio-de-productos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-operaciones-logistica.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\108375.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mapas-y-banderas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apertura-de-puerta-abierta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\silueta-del-icono-de-hogar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\distancia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\asdfghjkl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gorjeo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\codigos-qr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
